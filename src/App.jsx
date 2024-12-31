@@ -9,7 +9,7 @@ const App = () => {
   useEffect(() => {
     const fetchColor = async () => {
       try {
-        const response = await axios.get("https://demo-pass-backend.vercel.app//api/color");
+        const response = await axios.get("https://demo-pass-backend.vercel.app/api/color");
         if (response.data.color) {
           setSelectedColor(response.data.color);
         }
@@ -23,7 +23,7 @@ const App = () => {
   // Update color on the server
   const updateColor = async (color) => {
     try {
-      const response = await axios.post("https://demo-pass-backend.vercel.app//api/color", { color });
+      const response = await axios.post("https://demo-pass-backend.vercel.app/api/color", { color });
       if (response.data.color) {
         setSelectedColor(response.data.color);
       }
